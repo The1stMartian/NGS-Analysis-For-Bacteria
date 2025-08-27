@@ -3,8 +3,9 @@
 ## Overview:
 - This was my first NGS pipeline! 
 - Useful for simple mapping of fastq files to bacterial genomes on a local computer
-- Inputs:  pre-cleaned fastq files 
-- Outputs (2): 1) read-counts and 2) .wig files for visualization in MochiView.<br><br>
+- <b>Setup:</b> 1) Bowtie2 index, 2) features file (.saf) for FeatureCounts, 3) Linux software installation (see below)
+- <b>Inputs (1):</b>  Pre-cleaned fastq files 
+- <b>Outputs (2):</b> 1) Read-counts, 2) .wig files for visualization in MochiView.<br><br>
 - Downstream Analyses (Not included here): 1) RNA-Seq: Differential expression analysis using DEseq2. 2) Peak calling in MACS and differential binding analysis with DiffBind.
 
 Analysis methods: 

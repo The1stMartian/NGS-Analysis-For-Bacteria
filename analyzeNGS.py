@@ -120,7 +120,7 @@ def process_file(file_pair, fq_folder, gnm_fldr, genome, fasta, mappedfolder, pi
 
 	fqf1 = file_pair[0]		# forward fastq file
 	fqf2 = file_pair[1]		# reverse fastq file
-	name = file_pair[2]		# generic file name
+	name = file_pair[2]		# sample prefix
 
 	print("Now processing: " + name)
 	
