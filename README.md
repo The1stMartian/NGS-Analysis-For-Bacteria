@@ -1,11 +1,23 @@
-![](https://github.com/The1stMartian/FastqAnalysisPipeline/blob/main/doc/logo.png)
+![Logo](./doc/logo.png)<br>
 
-The fastqAnalysis script is a simple Seq data analysis pipeline written in Python3 for Linux. It will map fastq files to the user-specified genome using Bowtie2 and output both sorted .bam files and normalized wiggle files that can be visualized in MochiView. It will also create a read-counts file based upon the features listed in the accompanying .saf file. Read count data is particularly useful for ChIP-Seq and RNA-Seq analyses.
+## Overview:
+- This was my first NGS pipeline! 
+- Useful for simple mapping of fastq files to bacterial genomes on a local computer
+- Inputs -  pre-cleaned fastq files 
+- Outputs (2): 1) read-counts and 2) .wig files for visualization in MochiView.<br><br>
 
-Pre-requisites:
+Analysis methods: 
+- Bowtie2 - maps pre-trimmed fastq files to a given bacterial genome.
+- Samtools sort - sorts the .bam files
+- Picard - removes optical and PCR duplicates
+- Samtools mpilelup - creates a wiggle file for visualization
+- featureCounts - quantifies reads at genomic features. For ChIP-Seq and RNA-Seq analyses, the counts matrix can be the for downstream differential expression/differential binding analyses.<br>
+
+## Pre-requisites:
 - Python3 [Installation instructions](https://docs.anaconda.com/anaconda/install/linux/).
-- Bowtie2. [Installation instructions](https://www.metagenomics.wiki/tools/bowtie2/install).
+- Bowtie2 [Installation instructions](https://www.metagenomics.wiki/tools/bowtie2/install).
 - SamTools [Installation instructions](https://bioinformaticsreview.com/20210404/installing-samtools-on-ubuntu/#:~:text=%20Installing%20SAMtools%20on%20Ubuntu%20%201%20Preparing,We%20are%20in%20the%20same%20directory...%20More%20).
+- Java - (for Picard which is included here)
 
 
 Pipeline:
@@ -38,7 +50,7 @@ Pipeline:
 3) Execute the mapping program:
       <i>python fastqAnalysis_v8.py</i>
 
-      ![Cmd line](https://github.com/The1stMartian/fastqAnalysis/blob/main/doc/cmd.png)
+      ![Cmd line](./doc/cmd.png)
 
 
 4) Set up MochiView:
@@ -49,35 +61,35 @@ Pipeline:
 Set up your genome:
 - Import your .fasta file:
 
-![](https://github.com/The1stMartian/fastqAnalysis/blob/main/doc/mochi1.png)
+![](./doc/mochi1.png)
 
 - Import gene coordinate files
 
-![](https://github.com/The1stMartian/fastqAnalysis/blob/main/doc/mochi2.png)
+![](./doc/mochi2.png)
 
 - Import your normalized .wig files
 
-![](https://github.com/The1stMartian/fastqAnalysis/blob/main/doc/mochi3.png)
+![](./doc/mochi3.png)
 
 - Plot the data (Click "New Plot")
 
-![](https://github.com/The1stMartian/fastqAnalysis/blob/main/doc/mochi8.png)
+![](./doc/mochi8.png)
 
 - Select feature annotations to be shown
 
-![](https://github.com/The1stMartian/fastqAnalysis/blob/main/doc/mochi5.png)
+![](./doc/mochi5.png)
 
 - Select the data set(s) you want to visualize and pick line or column displays (and color)
 
-![](https://github.com/The1stMartian/fastqAnalysis/blob/main/doc/mochi6.png)
+![](./doc/mochi6.png)
 
 - Plot the data
 
-![](https://github.com/The1stMartian/fastqAnalysis/blob/main/doc/mochi9.png)
+![](./doc/mochi9.png)
 
 - Results:
 
-![](https://github.com/The1stMartian/fastqAnalysis/blob/main/doc/mochi7.png)
+![](./doc/mochi7.png)
 
 
 ### Troubleshooting:
