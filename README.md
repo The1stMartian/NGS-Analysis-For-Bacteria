@@ -35,22 +35,15 @@ Pipeline:
       - Place the resulting output files into the folder named "genomefiles"
       - Create a .saf file (feature coordinates/straind) for your genome by opening an existing .saf file and saving it as <chosen_genome_name>.saf
       - To input features:<br>
-             - Download a features file from NCBI genome (example using bacteria)<br>
-               https://www.ncbi.nlm.nih.gov/genome/browse#!/overview/<br>
-             - Enter your species name and click enter<br>
-             - Click "prokaryotes", NOT the species name link<br>
-             - Find your species and under the Accession tab, click the link formatted like "GCA_ ..."<br>
-             - Click the link for the FTP Directory for Genbank on the right<br>
-             - Click the link that ends with "_feature_table.txt.gz"<br>
+             - Download a features file from [NCBI genome](https://www.ncbi.nlm.nih.gov/genome/browse#!/overview/)<br>
              - After downloading, open the file in excel<br>
              - Copy/Paste the coordinates, systematic gene name, and strand information columns into the .saf file.<br>
-             - Make sure the new .saf file is in the genomefiles folder<br>
+             - Save to he genomefiles folder<br>
       - Create .mochi formatted gene coordinates files for later use:<br>
              - Copy an existing .mochi file as <chosen_genome_name>.mochi<br>
              - Copy/Paste feature information from your features file into the .mochi file and save.<br>
 
-3) Execute the mapping program:
-      <i>python fastqAnalysis_v8.py</i>
+3) Run <i>python analyzeNGS.py</i>
 
       ![Cmd line](./doc/cmd.png)
 
